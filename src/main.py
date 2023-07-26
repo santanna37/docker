@@ -1,16 +1,12 @@
-from flask import Flask
-app = Flask(__name__)
+from fastapi import FastAPI
+from config.database import get_db, criar_db
+from src.routers import routers
 
+app = FastAPI()
 
-@app.route("/", methods=["GET"])
-def hello_word():
-    return 'ola mundo'
+criar_db()
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
-
+app.include_router(routers.router)
 # syntax=docker/dockerfile:1
 
 # FROM python:3.8-slim-buster
