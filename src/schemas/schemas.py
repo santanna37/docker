@@ -4,5 +4,8 @@ from typing import Optional
 
 #tabalas 
 class Usuario(BaseModel):
-    id: int 
+    id: Optional[int] =None
     nome: str
+
+    class config:
+        orm_mode=True

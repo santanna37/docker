@@ -6,7 +6,7 @@ from src.models import models
 # CRIANDO
 class RepositorioUsuario():
     def __init__(self, session:Session):
-        self.session = Session
+        self.session = session
 
     def criar(self, usuario: schemas.Usuario):
         db_usuario = models.Usuario(

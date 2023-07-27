@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from fastapi import Depends, APIRouter
 from src.schemas import schemas
 from src.models import models
-from config.database import get_db, criar_db
+from src.config.database import get_db, criar_db
 from src.repositorio.repositorio import RepositorioUsuario
 
 

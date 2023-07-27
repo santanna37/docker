@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from config.database import get_db, criar_db
+from src.config.database import get_db, criar_db
 from src.routers import routers
 
 app = FastAPI()
